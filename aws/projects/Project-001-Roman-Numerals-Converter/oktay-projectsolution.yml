@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: |
+  This cloudformation template deploys your app on EC2 Instance
+
+Resources:
+  CFNInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-08e4e35cccc6189f4
+      InstanceType: t2.micro
+      KeyName: second 
+      SecurityGroups: 
+        - cfn-sec-group
+      Tags:
+        - Key: Name
+          Value: Cfn-Instance
